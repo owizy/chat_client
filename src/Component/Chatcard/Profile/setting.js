@@ -83,7 +83,13 @@ function Setting(){
         </div>
         <div className='set-cont'>
             <div className={theme === "dark-theme" ?'users1':"hovers"}>
-            <img src='https://cdn.pixabay.com/photo/2023/05/07/09/59/mountains-7976041_1280.jpg' className='profile_image'/>
+             <StyledBadge
+                overlap="circular"
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                variant=""
+              >
+                <Avatar alt={user?.fullname} src="/static/images/avatar/1.jpg" />
+              </StyledBadge> 
                 <p>{user.fullname}</p>
             </div>
              <div className={ theme === "dark-theme" ? ' setside' : 'hovers'} >
