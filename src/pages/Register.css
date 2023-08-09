@@ -1,0 +1,79 @@
+.containers{
+    width: 100%;
+    height: 100vh !important;
+    background-color: whitesmoke !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.l-container{
+   width: 0.45;
+    display: flex;
+    justify-content: flex-start;
+    height: 370px;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+}
+.l-containerlog{
+    width: 0.45;
+    display: flex;
+    justify-content: flex-start;
+    height: 300px;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+}
+.l-container h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+form button{
+    width: 50%;
+    background-color: #0CBF42;
+    color: #fff;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btncont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form button:hover{
+    color: #fff;
+    background-color: #000;
+}
+.members{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin: 10px 0px;
+}
+@media(max-width:750px){
+    .l-container{
+        flex: 0.9;
+    }
+    .l-containerlog{
+        flex: 0.9;
+    }
+}

@@ -1,0 +1,20 @@
+.progressbarcont{
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    opacity: 0.5;
+    transition:  opacity .3s ease-out;
+    margin: 1rem;
+    box-sizing: 8px 16px 32px #000;
+}
+ .active{
+    opacity: 1;
+    z-index: 999;
+}
+.progressbar{
+    height: 100%;
+    background-color:#fff;
+    border-radius: 4px;
+}
