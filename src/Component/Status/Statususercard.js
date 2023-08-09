@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import "./Statususercard.css"
-import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
@@ -21,35 +20,6 @@ function Statususercard() {
   const {user} = useContext(AuthContext)
    
   const [images, setImages] = useState([]);
-  console.log('img',images)
-  const onSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const formData = new FormData();
-      formData.append("userId", user._id);  
-      formData.append("picture", image, image);
-
-
-      let res = await axios.post("http://localhost:8000/api/upload", formData);
-      setError(false);
-      handleClose();
-    } catch (error) {
-      setError(true);
-      console.error(error);
-    }
-  };
-//  useEffect(()=>{
-//   getImage()
-//  },[])
-//   const getImage = async () => {
-//     try {
-//       let { data } = await axios.get("http://localhost:8000/api/images");
-//       setImages(data);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   };
     return (
     <div className='statuscont' onClick={()=>navigate('/status/:userid')}>
          <div >
@@ -61,20 +31,7 @@ function Statususercard() {
         
         
         
-         {/* { images
-        ? images.map((Images) => {
-            return (
-              <>
-              
-              
-              <img
-                  className=" w-100 img-fluid"
-                  src={Images.Images}
-                  alt="carousel"
-                />
-              
-                  <h3>{Images.userId}</h3>
- 
+    
               </>             
             );
           })
