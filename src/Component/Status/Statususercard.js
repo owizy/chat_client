@@ -21,12 +21,9 @@ function Statususercard() {
    
   const [images, setImages] = useState([]);
     return (
-    <div className='statuscont' onClick={()=>navigate('/status/:userid')}>
-         <div >
+    <div className='statuscont' onClick={handlenavigate}>
+         <div>
             <Avatar src={user?.fullname}/>
-        </div>
-        <div>
-           <p>{user?.fullname}</p> 
         </div> 
     </div>
   )
