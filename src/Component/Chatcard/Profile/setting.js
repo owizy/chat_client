@@ -21,7 +21,7 @@ import darkimg from "../../Screenshot (115).png"
 import { ThemeContext } from '../../../context/Themecontext';
 import { AuthContext } from '../../../context/AuthContext';
 import Avatar from '@mui/material/Avatar';
-
+import Badge from '@mui/material/Badge';
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
