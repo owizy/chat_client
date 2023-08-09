@@ -28,23 +28,6 @@ function Statususercard() {
         <div>
            <p>{user?.fullname}</p> 
         </div> 
-        
-        
-        
-    
-              </>             
-            );
-          })
-        : null}
- */}
-
-
-
-
-
-
-
-
     </div>
   )
 }
