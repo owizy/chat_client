@@ -6,7 +6,6 @@ import Avatar from '@mui/material/Avatar';
 import { Divider } from '@mui/material';
 import { ThemeContext } from '../context/Themecontext';
 import { BsArrowLeft } from 'react-icons/bs'
-import {AiOutlineSearch} from "react-icons/ai"
 import { AuthContext } from '../context/AuthContext';
 import ".././Component/Homepage.css"
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -39,10 +38,9 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   }));
 
 function Users({setSeechat,handlechange}) {
-    const {theme,activeuser,setActiveuser} = useContext(ThemeContext)
+    const {theme} = useContext(ThemeContext)
     const[users , setUser] = useState([]);
     const {user,setMessages,messages} =useContext(AuthContext)
-    const[active,setactive]=useState(false)
 	useEffect(() => {
 		 const fetchUsers = async () => {
 			const res = await fetch(`https://chat-server-2ykq.onrender.com/api/user/find/${user?._id}`, {
@@ -90,13 +88,11 @@ const fetchMessages = async (conversationId, receiver) => {
               return(
                 
 
-<div className='leftchat' onClick={()=>{ return fetchMessages('new',user) , handlechange(true)} }  >
+<div className='leftchat' onClick={()=>{ return fetchMessages('new',user) , handlechange(true)} } >
         <StyledBadge
                   overlap="circular"
-                  anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                  variant={''}
           >
-            <Avatar alt={user.fullname} src="/static/images/avatar/1.jpg" />
+            <Avatar alt={user.fullname} src="/" />
           </StyledBadge>    
           <div className='sec'>
            <p>{user.fullname}</p>  
