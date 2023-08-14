@@ -8,7 +8,7 @@ function Messsage({isreadusermessage,content,timestamp}) {
     <div className='messagecont' style={{backgroundColor:isreadusermessage?    theme !==  'dark-theme' ?  '#202C33':'#fff'     : theme !== 'dark-theme' ? '#D9FDD3' : "#005C4B",
     alignSelf:isreadusermessage? "flex-start":"flex-end",
     padding:"10px",
-    color: theme !== 'dark-theme' ? "black" :"#fff",
+    color:"black" ,
     display:"flex",
     justifyContent:"flex-start",
     flexDirection:"column",
