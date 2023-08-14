@@ -319,7 +319,7 @@ return (
                      {
                    
                      Alluser.map((({user})=>{
-                      if(user.fullname.includes(Querys.trim())) { return (
+                      if(user.fullname.toLowerCase().includes(Querys.trim().toLowerCase())) { return (
                         <Chatcards user={user}    show={setcurrentchat} key={user?._id} />
                       )
                   
