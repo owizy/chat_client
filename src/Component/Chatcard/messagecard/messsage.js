@@ -5,7 +5,7 @@ import { ThemeContext } from '../../../context/Themecontext'
 function Messsage({isreadusermessage,content,timestamp}) {
    const {theme} = useContext(ThemeContext)
   return (
-    <div className='messagecont' style={{backgroundColor:isreadusermessage?    theme !==  'dark-theme' ? '#fff' :'#202C33' : theme !== 'dark-theme' ? '#D9FDD3' : "#005C4B",
+    <div className='messagecont' style={{backgroundColor:isreadusermessage?    theme !==  'dark-theme' ?  '#202C33':'#fff'     : theme !== 'dark-theme' ? '#D9FDD3' : "#005C4B",
     alignSelf:isreadusermessage? "flex-start":"flex-end",
     padding:"10px",
     color: theme !== 'dark-theme' ? "black" :"#fff",
